@@ -37,7 +37,7 @@ public class CreateLimineConfig : Task
         xWriter.WriteLineAsync();
 
         // TODO: Add custom wallpaper system
-        xWriter.WriteLineAsync("TERM_WALLPAPER=boot:///boot/liminewp.bmp");
+        // xWriter.WriteLineAsync("TERM_WALLPAPER=boot:///boot/liminewp.bmp");
         xWriter.WriteLineAsync("INTERFACE_RESOLUTION=800x600x32");
         xWriter.WriteLineAsync();
 
