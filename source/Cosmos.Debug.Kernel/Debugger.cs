@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 
 namespace Cosmos.Debug.Kernel
 {
@@ -38,6 +38,8 @@ namespace Cosmos.Debug.Kernel
     /// </summary>
     public class Debugger
     {
+        public Debugger() { }
+
         /// <summary>
         /// Creates a new instance of the <see cref="Debugger"/> class.
         /// </summary>

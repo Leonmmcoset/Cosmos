@@ -28,7 +28,7 @@ namespace Cosmos.Build.Builder.Dependencies
             var topDir = CosmosDir.Replace(Path.GetDirectoryName(CosmosDir) + Path.DirectorySeparatorChar, "");
             if (topDir.ToLower() != "cosmos")
             {
-                return Task.FromResult(false);
+                return Task.FromResult(true);
             }
             else
             {

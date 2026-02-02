@@ -10,14 +10,10 @@ namespace Cosmos.Build.Builder.Dependencies
     internal class VisualStudioWorkloadsDependency : IDependency
     {
         private const string NetCore48SDK = "Microsoft.Net.Component.4.8.SDK";
-        private const string NetCore60Runtime = "Microsoft.NetCore.Component.Runtime.6.0";
-        private const string VisualStudioExtensionsWorkload = "Microsoft.VisualStudio.Workload.VisualStudioExtension";
         
         private static readonly string[] RequiredPackages = new string[]
         {
-            NetCore48SDK,
-            NetCore60Runtime,
-            VisualStudioExtensionsWorkload
+            NetCore48SDK
         };
         public string[] arg = Environment.GetCommandLineArgs();
         public bool ShouldInstallByDefault => false;
@@ -64,14 +60,6 @@ namespace Cosmos.Build.Builder.Dependencies
             if (packageId == NetCore48SDK)
             {
                 return ".Net Core 4.8 SDK";
-            }
-            else if(packageId == NetCore60Runtime)
-            {
-                return ".Net Core 6.0 Runtime";
-            }
-            else if (packageId == VisualStudioExtensionsWorkload)
-            {
-                return "Visual Studio Extension development";
             }
 
             return "Unknown Workload: " + packageId;
