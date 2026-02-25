@@ -130,7 +130,7 @@
     <UsingTask TaskName="Cosmos.Build.Tasks.MakeIso" AssemblyFile="$(CosmosBuildTasksAssembly)" />
     <UsingTask TaskName="Cosmos.Build.Tasks.LimineDeploy" AssemblyFile="$(CosmosBuildTasksAssembly)" />
     <UsingTask TaskName="Cosmos.Build.Tasks.Nasm" AssemblyFile="$(CosmosBuildTasksAssembly)" />
-    <UsingTask TaskName="Cosmos.Build.Tasks.ReadNasmMapToDebugInfo" AssemblyFile="$(CosmosBuildTasksAssembly)" />
+    <!-- <UsingTask TaskName="Cosmos.Build.Tasks.ReadNasmMapToDebugInfo" AssemblyFile="$(CosmosBuildTasksAssembly)" /> -->
     <UsingTask TaskName="Cosmos.Build.Tasks.TheRingMaster" AssemblyFile="$(CosmosBuildTasksAssembly)" />
 
     <PropertyGroup>
@@ -145,7 +145,7 @@
             Nasm;
             Ld;
             ExtractMapFromElfFile;
-            ReadNasmMapToDebugInfo;
+            <!-- ReadNasmMapToDebugInfo; -->
             Gzip;
             MakeIso
         </CosmosBuildDependsOn>
@@ -298,7 +298,7 @@
 
     ================================================================================
     -->
-    <Target Name="ReadNasmMapToDebugInfo"
+    <!-- <Target Name="ReadNasmMapToDebugInfo"
             Inputs="$(MapFile)"
             Outputs="$(CosmosDebugSymbolsFile)"
             Condition="'$(BinFormat)' != 'ELF'">
@@ -306,7 +306,7 @@
         <ReadNasmMapToDebugInfo MapFile="$(MapFile)"
                                 DebugInfoFile="$(CosmosDebugSymbolsFile)" />
 
-    </Target>
+    </Target> -->
 
     <!--
     ================================================================================
